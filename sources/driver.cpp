@@ -1,9 +1,8 @@
-// Cr3.cpp
+// driver.cpp
 #include "imports.h"
 #include "struct.h"
 #include "defs.h"
 #include "functions.h"
-#include "RemoveTrace.h"
 
 namespace ReadPageMemory {
     // Global page mapping array
@@ -309,3 +308,4 @@ extern "C" NTSTATUS RealDriverMain(PDRIVER_OBJECT pDriver, PUNICODE_STRING path)
     return STATUS_SUCCESS;
 
 }
+
