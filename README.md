@@ -1,5 +1,4 @@
 # Driver Read Memory
-[FOR EDUCATIONAL PURPOSE ONLY]
 [![Python Version](https://img.shields.io/badge/C++-14-FFD43B?logo=C++)](https://github.com/jhl337/driver-read-mem)
 [![Github stars](https://img.shields.io/github/stars/jhl337/driver-read-mem?color=ffb500)](https://github.com/jhl337/driver-read-mem)
 </div>
