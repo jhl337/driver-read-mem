@@ -3,6 +3,7 @@
 #include "struct.h"
 #include "defs.h"
 #include "functions.h"
+#include "RemoveTrace.h"
 
 namespace ReadPageMemory {
     // Global page mapping array
@@ -263,6 +264,7 @@ extern "C" VOID DriverUnload(PDRIVER_OBJECT pDriver) {
 
 // Driver entry point
 extern "C" NTSTATUS RealDriverMain(PDRIVER_OBJECT pDriver, PUNICODE_STRING path) {
+    DestroyDriverInformation(pDriver, NULL, (ULONG64)DriverUnload, FALSE);
     if (pDriver == NULL || path == NULL) return STATUS_INVALID_PARAMETER;
     UNREFERENCED_PARAMETER(path);
     UNREFERENCED_PARAMETER(pDriver);
@@ -305,4 +307,5 @@ extern "C" NTSTATUS RealDriverMain(PDRIVER_OBJECT pDriver, PUNICODE_STRING path)
     }
 
     return STATUS_SUCCESS;
+
 }
